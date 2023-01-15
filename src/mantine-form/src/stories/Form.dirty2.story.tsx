@@ -2,7 +2,6 @@ import React from 'react';
 import { useForm } from '@mantine/form';
 import { TextInput, Text, MantineProvider } from '@mantine/core';
 
-
 export default { title: 'Form' };
 
 function Demo() {

@@ -217,10 +217,10 @@ export function useForm<
   }, []);
 
   const isDirty: GetFieldStatus<Values> = (path) => {
-    const isOverridden = Object.keys(dirty).length > 0;
+    const overridenValue = getPath(path, dirty);
 
-    if (isOverridden) {
-      return getStatus(dirty, path);
+    if (typeof overridenValue == 'boolean') {
+      return overridenValue;
     }
 
     if (path) {
